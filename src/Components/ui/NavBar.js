@@ -26,28 +26,28 @@ export default function NavBar({title}) {
                     Tipo Equipo
                 </NavLink>
                 <NavLink 
-                    to='/estado'
+                    to='/EstadoEquipo'
                     tabIndex={2}
                     className="nav-item nav-link"
                 >
                     Estado
                 </NavLink>
                 <NavLink 
-                    to='/usuario'
+                    to='/Usuarios'
                     tabIndex={2}
                     className="nav-item nav-link"
                 >
                     Usuario
                 </NavLink>
                 <NavLink 
-                    to='/marca'
+                    to='/MarcaEquipo'
                     tabIndex={2}
                     className="nav-item nav-link"
                 >
                     Marca
                 </NavLink>
                 <NavLink 
-                    to='/inventario'
+                    to='/Inventarios'
                     tabIndex={2}
                     className="nav-item nav-link"
                 >

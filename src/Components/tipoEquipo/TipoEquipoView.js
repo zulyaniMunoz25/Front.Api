@@ -10,7 +10,7 @@ export default function TipoEquipo() {
   const [loading, setLoading] = useState(false)
   const [query, setQuery] = useState(true)
   const [error, setError] = useState(false)
-  const [tipoEquipo, setTipoEquipo] = useState({
+  const [TipoEquipo, setTipoEquipo] = useState({
     nombre: '',
     estado: true
   })
@@ -45,7 +45,7 @@ export default function TipoEquipo() {
     setErrorSend({status: false, msg: ''})
     setLoading(true)
     try{
-      const res = await crearTipoEquipo(tipoEquipo)
+      const res = await crearTipoEquipo(TipoEquipo)
       console.log(res)
       setLoading(true)
       setTipoEquipo({nombre: ''})
@@ -65,7 +65,7 @@ export default function TipoEquipo() {
 
   const handleChange = e => {
     setTipoEquipo({
-      ...tipoEquipo, 
+      ...TipoEquipo, 
       [e.target.name]: e.target.value
     })
   }
@@ -92,7 +92,7 @@ export default function TipoEquipo() {
     setLoading(true)
     try{
       setError(false)
-      const resp = await editarTipoEquipoPorID(tipoEquipo._id, tipoEquipo);
+      const resp = await editarTipoEquipoPorID(TipoEquipo._id, TipoEquipo);
       console.log(resp)
       resetTipoEquipo()
       listTipoEquipo()
@@ -143,14 +143,14 @@ export default function TipoEquipo() {
                       className="form-control" 
                       id="recipient-name"
                       onChange={handleChange}
-                      value={tipoEquipo.nombre}
+                      value={TipoEquipo.nombre}
                       name="nombre"
                     />
                     <select 
                       class="form-select" 
                       aria-label="Default select example"
                       name="estado"
-                      value={tipoEquipo.estado}
+                      value={TipoEquipo.estado}
                       onChange={handleChange}
                     >
                       <option value={false}>Inactivo</option>
@@ -168,7 +168,7 @@ export default function TipoEquipo() {
                   <button 
                     type="submit" 
                     className="btn btn-primary" 
-                    disabled={tipoEquipo.nombre.length <= 0}
+                    disabled={TipoEquipo.nombre.length <= 0}
                     data-bs-dismiss="modal"
                   >
                     Enviar
@@ -183,7 +183,7 @@ export default function TipoEquipo() {
         <Modal 
           titulo={'Tipo de Equipo'}
           guardar={guardarTipoEquipo}
-          element={tipoEquipo}
+          element={TipoEquipo}
           change={handleChange}
         />
         <button 

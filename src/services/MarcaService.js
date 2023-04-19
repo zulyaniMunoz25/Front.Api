@@ -1,7 +1,7 @@
 import { axiosConfig } from "../configuration/axiosConfig"
 
 const obtenerMarca = (estado = true) => {
-    return axiosConfig.get('marca?estado='+estado, {
+    return axiosConfig.get('MarcaEquipo?estado='+estado, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -10,7 +10,7 @@ const obtenerMarca = (estado = true) => {
 
 
 const crearMarca = (data) => {
-    return axiosConfig.post('marca', data, {
+    return axiosConfig.post('MarcaEquipo', data, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -19,7 +19,7 @@ const crearMarca = (data) => {
 
 
 const editarMarcaPorID = (tipoId, data) => {
-    return axiosConfig.put('marca/'+tipoId, data, {
+    return axiosConfig.put('MarcaEquipo/'+tipoId, data, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -27,7 +27,7 @@ const editarMarcaPorID = (tipoId, data) => {
 }
 
  const borrarMarcaPorID = (tipoId) => {
-    return axiosConfig.delete('marca/'+tipoId, {}, {
+    return axiosConfig.delete('MarcaEquipo/'+tipoId, {}, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -35,7 +35,7 @@ const editarMarcaPorID = (tipoId, data) => {
 }
 
  const obtenerMarcaPorID = (tipoId) => {
-    return axiosConfig.get('marca/'+tipoId, {
+    return axiosConfig.get('MarcaEquipo/'+tipoId, {
         headers: {
             'Content-type': 'application/json'
         }

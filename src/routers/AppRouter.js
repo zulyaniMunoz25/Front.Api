@@ -15,10 +15,10 @@ export default function AppRouter() {
         <main className='container'>
             <Routes >
                 <Route path='/' element={<TipoEquipoView />} />
-                <Route path='/estado' element={<EstadoView />} />
-                <Route path='/marca' element={<MarcaView />} />
-                <Route path='/usuario' element={<UsuarioView />} />
-                <Route path='/inventario' element={<InventarioView />} />
+                <Route path='/EstadoEquipo' element={<EstadoView />} />
+                <Route path='/MarcaEquipo' element={<MarcaView />} />
+                <Route path='/Usuarios' element={<UsuarioView />} />
+                <Route path='/Inventarios' element={<InventarioView />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </main>

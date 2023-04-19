@@ -2,7 +2,7 @@ import { axiosConfig } from "../configuration/axiosConfig"
 
 
 const obtenerEstado = (estado = true) => {
-    return axiosConfig.get('estado?estado='+estado, {
+    return axiosConfig.get('EstadoEquipo?estado='+estado, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -11,7 +11,7 @@ const obtenerEstado = (estado = true) => {
 
 
 const crearEstado = (data) => {
-    return axiosConfig.post('estado', data, {
+    return axiosConfig.post('EstadoEquipo', data, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -20,7 +20,7 @@ const crearEstado = (data) => {
 
 
 const editarEstadoPorID = (estadoId, data) => {
-    return axiosConfig.put('estado/'+estadoId, data, {
+    return axiosConfig.put('EstadoEquipo/'+estadoId, data, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -29,7 +29,7 @@ const editarEstadoPorID = (estadoId, data) => {
 
 
  const borrarEstadoPorID = (tipoId) => {
-    return axiosConfig.delete('estado/'+tipoId, {}, {
+    return axiosConfig.delete('EstadoEquipo/'+tipoId, {}, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -38,7 +38,7 @@ const editarEstadoPorID = (estadoId, data) => {
 
 
  const obtenerEstadoPorID = (tipoId) => {
-    return axiosConfig.get('estado/'+tipoId, {
+    return axiosConfig.get('EstadoEquipo/'+tipoId, {
         headers: {
             'Content-type': 'application/json'
         }

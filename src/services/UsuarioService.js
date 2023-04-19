@@ -4,7 +4,7 @@ import { axiosConfig } from "../configuration/axiosConfig"
  * Obtiene todos los usuarios
  */
 const obtenerUsuario = (estado = true) => {
-    return axiosConfig.get('usuario?estado='+estado, {
+    return axiosConfig.get('Usuarios?estado='+estado, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -15,7 +15,7 @@ const obtenerUsuario = (estado = true) => {
  * Crea Usuario
  */
 const crearUsuario = (data, email) => {
-    return axiosConfig.post('usuario', data, email, {
+    return axiosConfig.post('Usuarios', data, email, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -26,7 +26,7 @@ const crearUsuario = (data, email) => {
  * Actualizar usuario por id
  */
 const editarUsuarioPorID = (usuarioId, data, ) => {
-    return axiosConfig.put('usuario/'+usuarioId, data, {
+    return axiosConfig.put('Usuarios/'+usuarioId, data, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -37,7 +37,7 @@ const editarUsuarioPorID = (usuarioId, data, ) => {
  * Borra usuario por ID
  */
  const borrarUsuarioPorID = (tipoId) => {
-    return axiosConfig.delete('usuario/'+tipoId, {}, {
+    return axiosConfig.delete('Usuarios/'+tipoId, {}, {
         headers: {
             'Content-type': 'application/json'
         }
@@ -48,7 +48,7 @@ const editarUsuarioPorID = (usuarioId, data, ) => {
  * Consulta usuario por ID
  */
  const obtenerUsuarioPorID = (tipoId) => {
-    return axiosConfig.get('usuario/'+tipoId, {
+    return axiosConfig.get('Usuarios/'+tipoId, {
         headers: {
             'Content-type': 'application/json'
         }

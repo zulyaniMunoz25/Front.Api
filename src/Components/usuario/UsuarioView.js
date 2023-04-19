@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import React, { useEffect, useState } from 'react'
 import { obtenerUsuario, crearUsuario, editarUsuarioPorID, borrarUsuarioPorID} from '../../services/UsuarioService'
-import HeaderTable from '../ui/HeaderTable'
+import UsuariosTable from '../ui/UsuariosTable'
 import Modal from '../ui/Modal'
 
 export default function Usuario() {
@@ -80,13 +80,6 @@ export default function Usuario() {
     
   }
 
-
-//   const handleChange = e => {
-   // setUsuario({
-      //...usuario, 
-      //[e.target.name]: e.target.value
-   // })
-  //}
 
   const borrarUsuario = async (e) => {
     setLoading(true)
@@ -256,7 +249,7 @@ export default function Usuario() {
           </div>)
         }
         <table className="table">
-        <HeaderTable />
+        <UsuariosTable />
         <tbody>
           {
             usuarios.map((usuario,index) => {
